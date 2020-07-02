@@ -8,22 +8,47 @@ namespace Tic_Tac_Toe
         {
 
             char[,] board = new char[3, 3];
-
-
-            Print(board);
-            Console.WriteLine();
-            Console.Write("Podaj wiersz: ");
-            int row = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Podaj kolumnę: ");
-            int col = Convert.ToInt32(Console.ReadLine());
-
+            char player = 'X';
             Initialize(board);
 
-            board[0, 2] = 'X';
+            do
+            {
+                Console.Clear();
 
-            
+                Console.Write(" zawarosc tablicy 0,0 " + board[0, 0]);
+
+                Print(board);
+                Console.WriteLine();
+                Console.Write("Podaj wiersz: ");
+                int row = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Podaj kolumnę: ");
+                int col = Convert.ToInt32(Console.ReadLine());
+
+                
+                board[row, col] = player;
+
+                player = ChangePlayer(player);
+
+               
+            } while (true);
+
+
         }
+
+
+        static char ChangePlayer(char currPlayer)
+        {
+            if (currPlayer == 'X')
+            {
+                return 'O';
+            }
+            else
+            {
+                return 'X';
+            }
+        }
+
 
 
         static void Initialize(char[,] board)
