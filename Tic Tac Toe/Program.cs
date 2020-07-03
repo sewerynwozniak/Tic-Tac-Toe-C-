@@ -11,12 +11,12 @@ namespace Tic_Tac_Toe
             char[,] board = new char[3, 3];
             char player = 'X';
             Initialize(board);
+            bool going = true;
 
             do
             {
                 Console.Clear();
-
-                Console.Write(" zawarosc tablicy 0,0 " + board[0, 0]);
+                going = true;
 
                 Print(board);
                 Console.WriteLine();
@@ -26,10 +26,23 @@ namespace Tic_Tac_Toe
                 Console.Write("Podaj kolumnę: ");
                 int col = Convert.ToInt32(Console.ReadLine());
 
-                
-                board[row, col] = player;
 
-                player = Library.ChangePlayer(player);
+                if(board[row, col] == 'X' || board[row, col] == 'O')
+                {
+                    Console.WriteLine("Zajete pole");
+                    Console.ReadKey();
+                    going = false;
+                }
+
+
+                if (going)
+                {
+                    board[row, col] = player;
+
+                    player = Library.ChangePlayer(player);
+                }
+
+                
 
                
             } while (true);
