@@ -17,5 +17,21 @@ namespace Tic_Tac_Toe_Lib
             }
         }
 
+
+
+
+        public static bool checkIfAvail(char[,] board, bool going)
+        {
+            if (board[row, col] == 'X' || board[row, col] == 'O')
+            {
+                Console.WriteLine("Zajete pole");
+                Console.ReadKey();
+                going = false;
+            }
+
+            return going
+        }
+
+
     }
 }

@@ -5,9 +5,12 @@ namespace Tic_Tac_Toe
 {
     class Program
     {
+        private static int row;
+        private static int col;
+        private static bool going;
         static void Main(string[] args)
         {
-
+            
             char[,] board = new char[3, 3];
             char player = 'X';
             Initialize(board);
@@ -27,13 +30,8 @@ namespace Tic_Tac_Toe
                 int col = Convert.ToInt32(Console.ReadLine());
 
 
-                if(board[row, col] == 'X' || board[row, col] == 'O')
-                {
-                    Console.WriteLine("Zajete pole");
-                    Console.ReadKey();
-                    going = false;
-                }
 
+                checkIfAvail(board, going);
 
                 if (going)
                 {
@@ -51,7 +49,20 @@ namespace Tic_Tac_Toe
         }
 
 
-     
+
+         static void checkIfAvail(char[,] board, going)
+        {
+            if (board[row, col] == 'X' || board[row, col] == 'O')
+            {
+                Console.WriteLine("Zajete pole");
+                Console.ReadKey();
+                going = false;
+            }
+
+            return going
+        }
+
+
 
 
 
