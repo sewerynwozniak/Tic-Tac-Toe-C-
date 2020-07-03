@@ -1,4 +1,5 @@
 ﻿using System;
+using Tic_Tac_Toe_Lib;
 
 namespace Tic_Tac_Toe
 {
@@ -28,7 +29,7 @@ namespace Tic_Tac_Toe
                 
                 board[row, col] = player;
 
-                player = ChangePlayer(player);
+                player = Library.ChangePlayer(player);
 
                
             } while (true);
@@ -37,17 +38,7 @@ namespace Tic_Tac_Toe
         }
 
 
-        static char ChangePlayer(char currPlayer)
-        {
-            if (currPlayer == 'X')
-            {
-                return 'O';
-            }
-            else
-            {
-                return 'X';
-            }
-        }
+     
 
 
 

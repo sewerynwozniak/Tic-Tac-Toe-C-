@@ -1,0 +1,9 @@
+C:\Users\1990s\source\repos\Tic Tac Toe General\Tic Tac Toe Lib\bin\Debug\netstandard2.0\Tic Tac Toe Lib.deps.json
+C:\Users\1990s\source\repos\Tic Tac Toe General\Tic Tac Toe Lib\bin\Debug\netstandard2.0\Tic Tac Toe Lib.dll
+C:\Users\1990s\source\repos\Tic Tac Toe General\Tic Tac Toe Lib\bin\Debug\netstandard2.0\Tic Tac Toe Lib.pdb
+C:\Users\1990s\source\repos\Tic Tac Toe General\Tic Tac Toe Lib\obj\Debug\netstandard2.0\Tic Tac Toe Lib.csprojAssemblyReference.cache
+C:\Users\1990s\source\repos\Tic Tac Toe General\Tic Tac Toe Lib\obj\Debug\netstandard2.0\Tic Tac Toe Lib.csproj.CoreCompileInputs.cache
+C:\Users\1990s\source\repos\Tic Tac Toe General\Tic Tac Toe Lib\obj\Debug\netstandard2.0\Tic Tac Toe Lib.AssemblyInfoInputs.cache
+C:\Users\1990s\source\repos\Tic Tac Toe General\Tic Tac Toe Lib\obj\Debug\netstandard2.0\Tic Tac Toe Lib.AssemblyInfo.cs
+C:\Users\1990s\source\repos\Tic Tac Toe General\Tic Tac Toe Lib\obj\Debug\netstandard2.0\Tic Tac Toe Lib.dll
+C:\Users\1990s\source\repos\Tic Tac Toe General\Tic Tac Toe Lib\obj\Debug\netstandard2.0\Tic Tac Toe Lib.pdb

@@ -11,3 +11,6 @@ C:\Users\1990s\source\repos\Tic Tac Toe General\Tic Tac Toe\obj\Debug\netcoreapp
 C:\Users\1990s\source\repos\Tic Tac Toe General\Tic Tac Toe\obj\Debug\netcoreapp3.1\Tic Tac Toe.dll
 C:\Users\1990s\source\repos\Tic Tac Toe General\Tic Tac Toe\obj\Debug\netcoreapp3.1\Tic Tac Toe.pdb
 C:\Users\1990s\source\repos\Tic Tac Toe General\Tic Tac Toe\obj\Debug\netcoreapp3.1\Tic Tac Toe.genruntimeconfig.cache
+C:\Users\1990s\source\repos\Tic Tac Toe General\Tic Tac Toe\bin\Debug\netcoreapp3.1\Tic Tac Toe Lib.dll
+C:\Users\1990s\source\repos\Tic Tac Toe General\Tic Tac Toe\bin\Debug\netcoreapp3.1\Tic Tac Toe Lib.pdb
+C:\Users\1990s\source\repos\Tic Tac Toe General\Tic Tac Toe\obj\Debug\netcoreapp3.1\Tic Tac Toe.csproj.CopyComplete

@@ -10,11 +10,21 @@
         "runtime": {
           "Tic Tac Toe.dll": {}
         }
+      },
+      "Tic Tac Toe Lib/1.0.0": {
+        "runtime": {
+          "Tic Tac Toe Lib.dll": {}
+        }
       }
     }
   },
   "libraries": {
     "Tic Tac Toe/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Tic Tac Toe Lib/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
