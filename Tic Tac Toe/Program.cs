@@ -8,7 +8,7 @@ namespace Tic_Tac_Toe
     public class Program
     {
 
-        public static bool isGoing = true;
+        
 
         public static void Main(string[] args)
         {
@@ -25,7 +25,7 @@ namespace Tic_Tac_Toe
 
      
 
-            while(isGoing)
+            while(Library.isGoing)
             {
                 Console.Clear();
                 
@@ -45,11 +45,11 @@ namespace Tic_Tac_Toe
 
                 Library.checkIfAvail(row, col,board);
 
-                if (Library.going)
+                if (Library.emptySpot)
                 {
                     board[row, col] = player;
 
-                    checkWinner(player, board);
+                    Library.checkWinner(player, board);
 
                     player = Library.ChangePlayer(player);
                 }
@@ -65,16 +65,7 @@ namespace Tic_Tac_Toe
         }
 
 
-        static void checkWinner(char player, char[,] board)
-        {
-            if (player == board[0, 0] && player == board[0, 1] && player == board[0, 2])
-            {
-                isGoing = false;
-                Console.WriteLine("Gracz " + player + " wygrywa!");
-                Console.ReadKey();
-                
-            }
-        }
+     
 
 
 
