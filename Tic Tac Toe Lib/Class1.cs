@@ -1,14 +1,19 @@
 ﻿using System;
+
+
  
 
 namespace Tic_Tac_Toe_Lib
+
+
 {
-    public class Library
+    public  class Library
     {
-        public static int row;
-        public static int col;
+
+        
         public static bool going;
 
+      
 
         public static char ChangePlayer(char currPlayer)
         {
@@ -24,7 +29,28 @@ namespace Tic_Tac_Toe_Lib
 
 
 
-     
+        public static void checkIfAvail(int row, int col,char[,] board)
+        {
+            Console.WriteLine(row);
+            Console.WriteLine(col);
+
+            Console.ReadKey();
+            if (board[row, col] == 'X' || board[row, col] == 'O')
+            {
+                going = false;
+                Console.WriteLine("Zajete pole, naciśnij dowolny przycisk i wybierz ponownie");
+                Console.WriteLine(going);
+                Console.ReadKey();
+
+            }
+            else
+            {
+                going = true;
+            }
+
+
+        }
+
 
 
 

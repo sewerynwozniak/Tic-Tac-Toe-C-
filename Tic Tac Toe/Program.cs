@@ -4,19 +4,23 @@ using Tic_Tac_Toe_Lib;
 
 namespace Tic_Tac_Toe
 {
-    class Program
+    public class Program
     {
-        public static int row;
-        public static int col;
-        public static bool going =true;
+        
 
        public static void Main(string[] args)
         {
-            
-            char[,] board = new char[3, 3];
+          int row;
+          int col;
+          bool going = true;
+
+        char[,] board = new char[3, 3];
             char player = 'X';
             Initialize(board);
-            
+
+
+
+     
 
             do
             {
@@ -36,9 +40,9 @@ namespace Tic_Tac_Toe
 
 
 
-                checkIfAvail(board);
+                Library.checkIfAvail(row, col,board);
 
-                if (going)
+                if (Library.going)
                 {
                     board[row, col] = player;
 
@@ -55,25 +59,7 @@ namespace Tic_Tac_Toe
 
 
 
-        public static void checkIfAvail(char[,] board)
-        {
-            Console.WriteLine(row);
-            Console.WriteLine(col);
-            Console.WriteLine(going);
-            Console.ReadKey();
-            if (board[row, col] == 'X' || board[row, col] == 'O')
-            {
-                Console.WriteLine("Zajete pole, naciśnij dowolny przycisk i wybierz ponownie");
-                Console.ReadKey();
-                going = false;
-            }
-            else
-            {
-                going = true;
-            }
 
-
-        }
 
 
 
@@ -109,6 +95,10 @@ namespace Tic_Tac_Toe
                 Console.WriteLine();
             }
         }
+
+
+
+
 
     }
 }
