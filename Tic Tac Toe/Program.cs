@@ -32,15 +32,25 @@ namespace Tic_Tac_Toe
 
                 Print(board);
 
-              
-
                 Console.WriteLine();
+                Console.WriteLine("Gracz: "+ player);
                 Console.Write("Podaj wiersz: ");
                 row = Convert.ToInt32(Console.ReadLine());
+               
+                while (row != 0 && row != 1 && row != 2)
+                {
+                    Console.WriteLine("Możesz wybrać tylko cyfry 0, 1 i 2");
+                    row = Convert.ToInt32(Console.ReadLine());
+                }
 
                 Console.Write("Podaj kolumnę: ");
                 col = Convert.ToInt32(Console.ReadLine());
 
+                while (col != 0 && col != 1 && col != 2)
+                {
+                    Console.WriteLine("Możesz wybrać tylko cyfry 0, 1 i 2");
+                    col = Convert.ToInt32(Console.ReadLine());
+                }
 
 
                 Library.checkIfAvail(row, col,board);
