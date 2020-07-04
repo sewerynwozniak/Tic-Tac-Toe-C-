@@ -1,37 +1,42 @@
 ﻿using System;
+using System.Runtime.InteropServices.ComTypes;
 using Tic_Tac_Toe_Lib;
 
 namespace Tic_Tac_Toe
 {
     class Program
     {
-        private static int row;
-        private static int col;
-        private static bool going;
-        static void Main(string[] args)
+        public static int row;
+        public static int col;
+        public static bool going =true;
+
+       public static void Main(string[] args)
         {
             
             char[,] board = new char[3, 3];
             char player = 'X';
             Initialize(board);
-            bool going = true;
+            
 
             do
             {
                 Console.Clear();
-                going = true;
+                
 
                 Print(board);
+
+              
+
                 Console.WriteLine();
                 Console.Write("Podaj wiersz: ");
-                int row = Convert.ToInt32(Console.ReadLine());
+                row = Convert.ToInt32(Console.ReadLine());
 
                 Console.Write("Podaj kolumnę: ");
-                int col = Convert.ToInt32(Console.ReadLine());
+                col = Convert.ToInt32(Console.ReadLine());
 
 
 
-                checkIfAvail(board, going);
+                checkIfAvail(board);
 
                 if (going)
                 {
@@ -50,17 +55,27 @@ namespace Tic_Tac_Toe
 
 
 
-         static void checkIfAvail(char[,] board, going)
+        public static void checkIfAvail(char[,] board)
         {
+            Console.WriteLine(row);
+            Console.WriteLine(col);
+            Console.WriteLine(going);
+            Console.ReadKey();
             if (board[row, col] == 'X' || board[row, col] == 'O')
             {
-                Console.WriteLine("Zajete pole");
+                Console.WriteLine("Zajete pole, naciśnij dowolny przycisk i wybierz ponownie");
                 Console.ReadKey();
                 going = false;
             }
+            else
+            {
+                going = true;
+            }
 
-            return going
+
         }
+
+
 
 
 

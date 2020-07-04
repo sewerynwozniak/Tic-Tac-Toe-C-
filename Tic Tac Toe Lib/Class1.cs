@@ -1,9 +1,14 @@
 ﻿using System;
+ 
 
 namespace Tic_Tac_Toe_Lib
 {
     public class Library
     {
+        public static int row;
+        public static int col;
+        public static bool going;
+
 
         public static char ChangePlayer(char currPlayer)
         {
@@ -19,18 +24,11 @@ namespace Tic_Tac_Toe_Lib
 
 
 
+     
 
-        public static bool checkIfAvail(char[,] board, bool going)
-        {
-            if (board[row, col] == 'X' || board[row, col] == 'O')
-            {
-                Console.WriteLine("Zajete pole");
-                Console.ReadKey();
-                going = false;
-            }
 
-            return going
-        }
+
+
 
 
     }
