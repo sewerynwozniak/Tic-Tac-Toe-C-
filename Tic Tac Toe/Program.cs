@@ -1,28 +1,31 @@
 ﻿using System;
 using System.Runtime.InteropServices.ComTypes;
+using System.Security.Cryptography.X509Certificates;
 using Tic_Tac_Toe_Lib;
 
 namespace Tic_Tac_Toe
 {
     public class Program
     {
-        
 
-       public static void Main(string[] args)
+        public static bool isGoing = true;
+
+        public static void Main(string[] args)
         {
           int row;
           int col;
-          bool going = true;
+          
 
         char[,] board = new char[3, 3];
             char player = 'X';
+            
             Initialize(board);
 
 
 
      
 
-            do
+            while(isGoing)
             {
                 Console.Clear();
                 
@@ -46,21 +49,32 @@ namespace Tic_Tac_Toe
                 {
                     board[row, col] = player;
 
+                    checkWinner(player, board);
+
                     player = Library.ChangePlayer(player);
                 }
 
+
+                
                 
 
                
-            } while (true);
+            } 
 
 
         }
 
 
-
-
-
+        static void checkWinner(char player, char[,] board)
+        {
+            if (player == board[0, 0] && player == board[0, 1] && player == board[0, 2])
+            {
+                isGoing = false;
+                Console.WriteLine("Gracz " + player + " wygrywa!");
+                Console.ReadKey();
+                
+            }
+        }
 
 
 
